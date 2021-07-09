@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite 001">
+    <test name="Invalid Data Test">
+        <classes>
+            <class name="com.DataProvider.DP_LoginTest"> </class>
+        </classes>
+    </test>
+</suite>
