@@ -3,7 +3,6 @@
     <test name="Simple Test">
         <classes>
             <class name="com.TestNGDemo.LoginTestNG"> </class>
-
         </classes>
     </test>
 </suite>

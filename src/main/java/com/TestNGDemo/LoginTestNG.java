@@ -1,9 +1,13 @@
 package com.TestNGDemo;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -22,8 +26,11 @@ public class LoginTestNG {
     public void tearDown(){
         driver.quit();
     }
+
+
     @Test
     public static void TC_Login_Invalid_001(){
+
         WebElement Email=driver.findElement(By.xpath("//input[@id='input-email']"));
         WebElement Password=driver.findElement(By.xpath("//input[@id='input-password']"));
         WebElement LoginBtn=driver.findElement(By.cssSelector("#content > div > div:nth-child(2) > div > form > input"));
@@ -45,13 +52,15 @@ public class LoginTestNG {
         String Act_Title=driver.getTitle();
 
         //step 3: Compare
-        if(Exp_Title.equals(Act_Title)){
-            System.out.println("Test PASSED!! for InValid test Data");
-        }
-        else {
-            System.out.println("Test Failed!! for InValid test Data");
-        }
-        System.out.println("Test Case 001 Executed");
+//        if(Exp_Title.equals(Act_Title)){
+//            System.out.println("Test PASSED!! for InValid test Data");
+//        }
+//        else {
+//            System.out.println("Test Failed!! for InValid test Data");
+//        }
+
+        Assert.assertEquals(Exp_Title,Act_Title);  // True ==> Pass || False==> Failed
+
     }
 
     @Test
@@ -69,16 +78,17 @@ public class LoginTestNG {
         // If Login--> Test Passed
         // Else --> Test Failed
         // If Login--> Test failed
-        String Exp_Title="Account Login";
+        String Exp_Title="My Account.";
         String Act_Title=driver.getTitle();
 
         //step 3: Compare
-        if(!Exp_Title.equals(Act_Title)){
-            System.out.println("Test PASSED!! for Valid test Data");
-        }
-        else {
-            System.out.println("Test FAILED!! for Valid test Data");
-        }
-        System.out.println("Test Case 002 Executed");
+//        if(!Exp_Title.equals(Act_Title)){
+//            System.out.println("Test PASSED!! for Valid test Data");
+//        }
+//        else {
+//            System.out.println("Test FAILED!! for Valid test Data");
+//        }
+        Assert.assertEquals(Exp_Title,Act_Title);  // True ==> Pass || False==> Failed
+
     }
 }
