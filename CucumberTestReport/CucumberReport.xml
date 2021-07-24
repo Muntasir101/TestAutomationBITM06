@@ -1,0 +1,60 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-24T13:15:06.894Z",
+        "line": 3,
+        "name": "Verify Login with valid Credentials",
+        "description": "",
+        "id": "login-functionality-test;verify-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5241000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open Browser and Navigate to Login page",
+            "match": {
+              "location": "com.Cucumber.LoginStep.open_browser_and_navigate_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2687000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Enter valid Email and password",
+            "match": {
+              "location": "com.Cucumber.LoginStep.enter_valid_email_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 779000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Login Successful and close test",
+            "match": {
+              "location": "com.Cucumber.LoginStep.login_Successful_and_close_test()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login Functionality Test",
+    "description": "",
+    "id": "login-functionality-test",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/com/Cucumber/LoginTest.feature",
+    "tags": []
+  }
+]

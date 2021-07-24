@@ -5,13 +5,17 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features = "F:\\Training\\PeopleNTech\\BITM Online 6\\AutomationProject\\TestAutomationBITM06\\src\\main\\java\\com\\Cucumber",
-                 glue = {"com.Cucumber.LoginStep"},
-                 plugin = {
-                       "pretty","html:target/CucumberReport.html"
-                 }
-)
 
-public class Runner {
+@CucumberOptions(features = "./src/main/java/com/Cucumber/LoginTest.feature",
+                 glue = {"com.Cucumber"},
+                 plugin = {
+                         "pretty","html:CucumberTestReport/CucumberReport.html",
+                         "pretty", "json:CucumberTestReport/CucumberReport.json",
+                 },
+                  monochrome = true
+      )
+
+@RunWith(Cucumber.class)
+
+public class  Runner {
 }
